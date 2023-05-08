@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
