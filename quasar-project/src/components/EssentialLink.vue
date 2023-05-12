@@ -19,7 +19,7 @@
   </q-item>
 </template>
 
-<script>
+<script scoped>
 import { defineComponent } from 'vue';
 
 export default defineComponent({
