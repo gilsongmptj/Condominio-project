@@ -1,21 +1,23 @@
+import ErrorNotFound from 'pages/ErrorNotFound.vue';
+import MainLayout from 'layouts/MainLayout.vue';
+import IndexPage from '../pages/IndexPage.vue';
+
 const routes = [
   {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    path: '/menu',
+    component: MainLayout,
+    children: ({
+      path: 'menu',
+      component: IndexPage,
+    }),
   },
-
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('components/AppLogin.vue'),
+    path: '/',
+    component: () => import('pages/LoginPage.vue'),
   },
-
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
+    component: ErrorNotFound,
   },
 ];
 
