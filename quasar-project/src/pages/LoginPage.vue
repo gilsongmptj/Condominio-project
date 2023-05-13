@@ -19,7 +19,12 @@
             </q-form>
         </div>
     </div>
-    </template>
+</template>
+<script scoped>
+const axios = require('axios');
+
+
+</script>
     <style>
     .container{
         height: 100vh;
