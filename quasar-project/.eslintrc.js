@@ -74,6 +74,6 @@ module.exports = {
     // allow debugger during development only
     // eslint-disable-next-line quotes
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    'linebreak-style':['error' , 'windows'],
+    'linebreak-style': ['error', 'unix'],
   },
 };

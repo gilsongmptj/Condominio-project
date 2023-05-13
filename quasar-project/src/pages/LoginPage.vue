@@ -1,3 +1,4 @@
+<!-- eslint-disable no-unused-vars -->
 <template>
     <div class="container">
         <div class="content">
@@ -15,15 +16,17 @@
                 <q-label style="color: #CB4335">Nº APARTAMENTO</q-label>
                 <input type="number" class="input" />
                 </div>
-                <q-btn color="secondary" label="Inicar" class="button" />
+                <q-btn
+                  color="secondary"
+                  label="Inicar"
+                  class="button"
+                 />
             </q-form>
         </div>
     </div>
-</template>
-<script scoped>
-const axios = require('axios');
-
-
+    </template>
+<script setup>
+// const axios = require('axios').default;
 </script>
     <style>
     .container{
