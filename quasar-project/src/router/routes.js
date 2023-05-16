@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/cadastroUsuario',
     name: 'Cadastro de Usuario',
-    component: () => import('pager/cadastroUsuario.vue'),
+    component: () => import('pages/cadastroUsuario.vue'),
   },
   {
     path: '/encomendas',
@@ -25,11 +25,6 @@ const routes = [
     path: '/loginUser',
     name: 'list-user',
     component: () => import('pages/LonginPageMorador.vue'),
-  },
-  {
-    path: '/newOrders',
-    name: 'new-Orders',
-    component: () => import('components/newOrder.vue'),
   },
   // Always leave this as last one,
   // but you can also remove it
