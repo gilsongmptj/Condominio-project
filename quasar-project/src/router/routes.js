@@ -12,9 +12,27 @@ const routes = [
     }),
   },
   {
-    path: '/',
-    component: () => import('pages/LoginPage.vue'),
+    path: '/cadastroUsuario',
+    name: 'Cadastro de Usuario',
+    component: () => import('pager/cadastroUsuario.vue'),
   },
+  {
+    path: '/encomendas',
+    name: 'encomendas',
+    component: () => import('pages/encomendasRecebidas.vue'),
+  },
+  {
+    path: '/loginUser',
+    name: 'list-user',
+    component: () => import('pages/LonginPageMorador.vue'),
+  },
+  {
+    path: '/newOrders',
+    name: 'new-Orders',
+    component: () => import('components/newOrder.vue'),
+  },
+  // Always leave this as last one,
+  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
     component: ErrorNotFound,
