@@ -1,32 +1,109 @@
+<!-- eslint-disable vue/no-parsing-error -->
 <!-- eslint-disable no-unused-vars -->
 <template>
-    <div class="container">
-        <div class="content">
-            <img class="logo" src="../assets/logo-app.svg"/>
-            <div class="header">
-            <h2 style="color: #CB4335">LOGIN</h2>
-            <p style="color: #CB4335">Bem-vindo Morador</p>
+    <q-layout class="container">
+
+      <q-form
+        ref="formRef"
+        @submit="onSubmit"
+        @reset="onReset"
+        class="q-gutter-md"
+        >
+        <img class="logo" src="../assets/logo-app.svg"/>
+        <h2
+          style="color: #CB4335"
+          >
+          LOGIN
+        </h2>
+        <div class="row flex-center">
+              <q-toogle class="text-h5" v-model="Sindico" label="Modo Sindico/Porteiro"/>
             </div>
-            <q-form class="form">
-                <div class="mt-3">
-                <q-label style="color: #CB4335">CPF</q-label>
-                <input type="number" class="input"/>
-                </div>
-                <div class="mt-3">
-                <q-label style="color: #CB4335">Nº APARTAMENTO</q-label>
-                <input type="number" class="input" />
-                </div>
-                <q-btn
-                  color="secondary"
-                  label="Inicar"
-                  class="button"
-                 />
-            </q-form>
-        </div>
-    </div>
-    </template>
-<script setup>
-// const axios = require('axios').default;
+            <q-input
+              filled
+              v-model="cpf"
+              label="Insira o CPF"
+              lazy-rules:
+              rules="[
+              (val) => (val && val.length >0) || 'Campo obrigatório',
+              ]"
+              />
+            <q-input
+              v-if="!Sindico"
+              filled
+              type="number"
+              v-model="apartmento"
+              label="Digite o número do seu apartamento"
+              lazy-rules
+              :rules="[
+                (val) => (val && val.length > 0) || 'campo obrigatório',
+              ]"
+            />
+            <q-input
+              v-else
+              filled
+              type="string"
+              v-model="codeAcess"
+              label="Digite o seu codigo de acesso"
+              lazy-rules
+              :rules="[
+                (val) => (val && val.length > 0) || 'O campo não pode ser vazio',
+              ]"
+            />
+            <q-btn
+              color="secondary"
+              label="Entrar"
+              class="button"
+             />
+
+          </q-form>
+    </q-layout>
+</template>
+<script>
+import { ref } from 'vue';
+import { api } from 'boot/axios';
+import { useRouter } from 'vue-router';
+
+export default {
+  setup() {
+    const router = useRouter();
+    const Sindico = ref(false);
+    const formRef = ref(null);
+    const dataLogin = ref({
+      cpf: '',
+      apartment: '',
+      codeAcess: '',
+    });
+
+    const onSubmit = () => {
+      const { cpf, apartment, codeAcess } = dataLogin.value;
+
+      if (Sindico.value) {
+        api.get(`/apartments?cpf=${cpf}&id=${apartment}&_expand=user`)
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      } else {
+        api.get(`/users?cpf=${cpf}&codeAcess=${codeAcess}`)
+          .then((response) => {
+            if (response.data.length === 0) {
+              throw new Error('Request failed');
+            }
+          });
+      }
+    };
+
+    return {
+      Sindico,
+      formRef,
+      dataLogin,
+      router,
+
+    };
+  },
+};
 </script>
     <style>
     .container{

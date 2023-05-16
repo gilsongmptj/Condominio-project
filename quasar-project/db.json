@@ -1,0 +1,38 @@
+{
+  "Users":[
+    {"id":1, "username":"1234AB", "password":"08559264574"}
+  ],
+"AP12345": [
+
+    { "id": 1,
+    "name": "CaixaKabum",
+    "destinatario": "AP12345",
+    "coletor":"João da Silva",
+    "data_de_recebimento": "2023-00-00",
+    "retirado":true
+    },
+    { "id": 2,
+    "name": "CaixaPichau",
+    "destinatario": "AP12345",
+    "coletor":"felipe",
+    "data_de_recebimento": "2023-00-00",
+    "retirado":true
+    },
+    { "id": 3,
+    "name": "CaixaKabum",
+    "destinatario": "412412",
+    "coletor":"Paulo",
+    "data_de_recebimento": "2023-00-00",
+    "retirado":true
+  }],
+  "AP2222A": [
+
+    { "id": 1,
+    "name": "CaixaKabum",
+    "destinatario": "AP12345",
+    "coletor":"João da Silva",
+    "data_de_recebimento": "2023-00-00",
+    "retirado":true
+    }
+  ]
+}
