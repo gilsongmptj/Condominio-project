@@ -10,13 +10,15 @@
         class="q-gutter-md"
         >
         <img class="logo" src="../assets/logo-app.svg"/>
-        <h2
-          style="color: #CB4335"
-          >
+        <h2 style="color: #CB4335">
           LOGIN
         </h2>
         <div class="row flex-center">
-              <q-toogle class="text-h5" v-model="Sindico" label="Modo Sindico/Porteiro"/>
+              <q-toogle
+                class="text-h5"
+                v-model="Admin"
+                label="Modo Sindico/Porteiro"
+              />
             </div>
             <q-input
               filled
@@ -28,11 +30,11 @@
               ]"
               />
             <q-input
-              v-if="!Sindico"
+              v-if="!Admin"
               filled
               type="number"
               v-model="apartmento"
-              label="Digite o número do seu apartamento"
+              label="Insira o número apartamento"
               lazy-rules
               :rules="[
                 (val) => (val && val.length > 0) || 'campo obrigatório',
@@ -43,7 +45,7 @@
               filled
               type="string"
               v-model="codeAcess"
-              label="Digite o seu codigo de acesso"
+              label="Insira o codigo de acesso"
               lazy-rules
               :rules="[
                 (val) => (val && val.length > 0) || 'O campo não pode ser vazio',
