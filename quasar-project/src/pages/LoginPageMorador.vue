@@ -9,56 +9,56 @@
         @reset="onReset"
         class="q-gutter-md"
         >
-        <img class="logo" src="../assets/logo-app.svg"/>
-        <h2 style="color: #CB4335">
-          LOGIN
-        </h2>
-        <div class="row flex-center">
-              <q-toogle
-                class="text-h5"
-                v-model="Admin"
-                label="Modo Sindico/Porteiro"
-              />
-            </div>
-            <q-input
-              filled
-              v-model="cpf"
-              label="Insira o CPF"
-              lazy-rules:
-              rules="[
-              (val) => (val && val.length >0) || 'Campo obrigatório',
-              ]"
-              />
-            <q-input
-              v-if="!Admin"
-              filled
-              type="number"
-              v-model="apartmento"
-              label="Insira o número apartamento"
-              lazy-rules
-              :rules="[
-                (val) => (val && val.length > 0) || 'campo obrigatório',
-              ]"
-            />
-            <q-input
-              v-else
-              filled
-              type="string"
-              v-model="codeAcess"
-              label="Insira o codigo de acesso"
-              lazy-rules
-              :rules="[
-                (val) => (val && val.length > 0) || 'O campo não pode ser vazio',
-              ]"
-            />
-            <q-btn
-              color="secondary"
-              label="Entrar"
-              class="button"
-             />
+      <img class="logo" src="../assets/logo-app.svg"/>
+      <h2 style="color: #CB4335">
+        LOGIN
+      </h2>
+      <div class="row flex-center">
+        <q-toogle
+          class="text-h5"
+          v-model="Admin"
+          label="Modo Sindico/Porteiro"
+        />
+      </div>
+      <q-input
+        filled
+        v-model="cpf"
+        label="Insira o CPF"
+        lazy-rules:
+        rules="[
+        (val) => (val && val.length >0) || 'Campo obrigatório',
+        ]"
+        />
+      <q-input
+        v-if="!Admin"
+        filled
+        type="number"
+        v-model="apartmento"
+        label="Insira o número apartamento"
+        lazy-rules
+        :rules="[
+          (val) => (val && val.length > 0) || 'campo obrigatório',
+        ]"
+      />
+      <q-input
+        v-else
+        filled
+        type="string"
+        v-model="codeAcess"
+        label="Insira o codigo de acesso"
+        lazy-rules
+        :rules="[
+          (val) => (val && val.length > 0) || 'O campo não pode ser vazio',
+        ]"
+      />
+        <q-btn
+          color="secondary"
+          label="Entrar"
+          class="button"
+        />
 
-          </q-form>
-    </q-layout>
+    </q-form>
+  </q-layout>
 </template>
 <script>
 import { ref } from 'vue';
