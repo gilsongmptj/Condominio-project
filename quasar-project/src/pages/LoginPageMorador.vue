@@ -33,7 +33,7 @@
         v-if="!Admin"
         filled
         type="number"
-        v-model="apartmento"
+        v-model="apartamento"
         label="Insira o número apartamento"
         lazy-rules
         :rules="[
@@ -83,7 +83,7 @@ export default {
       if (Admin.value) {
         api.get(`/apartments?cpf=${cpf}&id=${apartment}&_expand=user`)
           .then((response) => {
-            console.log(response.data);
+            console.log(response.dataLogin);
           })
           .catch((error) => {
             console.log(error);
@@ -91,7 +91,7 @@ export default {
       } else {
         api.get(`/users?cpf=${cpf}&codeAcess=${codeAcess}`)
           .then((response) => {
-            if (response.data.length === 0) {
+            if (response.dataLogin.length === 0) {
               throw new Error('Request failed');
             }
           })
