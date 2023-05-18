@@ -66,7 +66,7 @@ import { useRouter } from 'vue-router';
 export default {
   setup() {
     const router = useRouter();
-    const Sindico = ref(false);
+    const Admin = ref(false);
     const formRef = ref(null);
     const dataLogin = ref({
       cpf: '',
@@ -74,10 +74,11 @@ export default {
       codeAcess: '',
     });
 
+    // eslint-disable-next-line no-unused-vars
     const onSubmit = () => {
       const { cpf, apartment, codeAcess } = dataLogin.value;
 
-      if (Sindico.value) {
+      if (Admin.value) {
         api.get(`/apartments?cpf=${cpf}&id=${apartment}&_expand=user`)
           .then((response) => {
             console.log(response.data);
@@ -91,12 +92,15 @@ export default {
             if (response.data.length === 0) {
               throw new Error('Request failed');
             }
+          })
+          .catch((error) => {
+            console.log(error);
           });
       }
     };
 
     return {
-      Sindico,
+      Admin,
       formRef,
       dataLogin,
       router,
