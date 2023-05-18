@@ -127,7 +127,10 @@ export default {
         display: block;
         margin: 0 auto;
     }
-
+    .h2{
+      justify-content: center;
+      align-items: center;
+    }
     .content{
         padding: 1rem;
         width: 40%;

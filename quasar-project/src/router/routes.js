@@ -26,6 +26,16 @@ const routes = [
     name: 'encomendas',
     component: () => import('pages/encomendasRecebidas.vue'),
   },
+  {
+    path: '/usuario',
+    name: 'Usuario',
+    component: () => import('pages/TelaEscolha.vue'),
+  },
+  {
+    path: '/historico',
+    name: 'Histórico de Encomendas',
+    component: () => import('pages/HistoricoEncomendas.vue'),
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
