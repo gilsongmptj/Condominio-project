@@ -64,6 +64,7 @@
 import { ref } from 'vue';
 import { api } from 'boot/axios';
 import { useRouter } from 'vue-router';
+import { console } from 'html';
 
 export default {
   setup() {
