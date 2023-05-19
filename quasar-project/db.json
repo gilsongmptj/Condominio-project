@@ -1,38 +1,212 @@
 {
-  "Users":[
-    {"id":1, "username":"1234AB", "password":"08559264574"}
+  "Usuarios":[
+     {
+    "id": 1,
+    "name": "John Biden",
+    "accessCode": "d3aff16a801b4b7d36b4da1094bee345",
+    "cpf": "846.499.970-46",
+    "userType": "inquilino"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "accessCode": "a8e9c2f3d4b1e0a7d8b5c3d9e4f1a6b",
+    "cpf": "435.241.650-90",
+    "userType": "inquilino"
+  },
+  {
+    "id": 3,
+    "name": "Mark Smith",
+    "accessCode": "f2e5a7d3b1c4e6a8f9d1b3c7a2d8b5c",
+    "cpf": "681.896.725-80",
+    "userType": "inquilino"
+  },
+  {
+    "id": 4,
+    "name": "Sarah Johnson",
+    "accessCode": "b7c8d6e1a9f3b4a6e7a2c5d7b2a9e3f",
+    "cpf": "118.452.375-25",
+    "userType": "inquilino"
+  },
+  {
+    "id": 5,
+    "name": "Michael Brown",
+    "accessCode": "e5a7c2f9d1b6e4a8d5b3c1d9e4f1a7b",
+    "cpf": "957.809.864-62",
+    "userType": "porteiro"
+  },
+  {
+    "id": 6,
+    "name": "Emily Davis",
+    "accessCode": "d5b9c7e1f4a6d2b8e9f1a3c5b9d2e7f",
+    "cpf": "503.356.562-01",
+    "userType": "inquilino"
+  },
+  {
+    "id": 7,
+    "name": "Christopher Wilson",
+    "accessCode": "b5c9a2d8e4f6b1c5d2e1f9a4d5e2f7b",
+    "cpf": "740.529.148-39",
+    "userType": "porteiro"
+  },
+  {
+    "id": 8,
+    "name": "Olivia Martinez",
+    "accessCode": "f3b6e9d2a7c1f5b8e1a4c3d9e2f7b5c",
+    "cpf": "286.683.680-88",
+    "userType": "sindico"
+  },
+  {
+    "id": 9,
+    "name": "Daniel Anderson",
+    "accessCode": "a6d9e2f8b3c1a4d6b8c5e2f9a1d7b5e",
+    "cpf": "625.138.215-29",
+    "userType": "inquilino"
+  }
   ],
-"AP12345": [
 
-    { "id": 1,
-    "name": "CaixaKabum",
-    "destinatario": "AP12345",
-    "coletor":"João da Silva",
-    "data_de_recebimento": "2023-00-00",
-    "retirado":true
+  "Encomendas": [
+    {
+      "id": 1,
+      "name": "Cadeira Gamer",
+      "destinatario": "101A",
+      "coletor": "Joãozinho",
+      "data_de_recebimento": "12/05/2025",
+      "retirado": true
     },
-    { "id": 2,
-    "name": "CaixaPichau",
-    "destinatario": "AP12345",
-    "coletor":"felipe",
-    "data_de_recebimento": "2023-00-00",
-    "retirado":true
+    {
+      "id": 2,
+      "name": "Mouse Gamer",
+      "destinatario": "101B",
+      "coletor": "Joãozinho",
+      "data_de_recebimento": "15/05/2025",
+      "retirado": true
     },
-    { "id": 3,
-    "name": "CaixaKabum",
-    "destinatario": "412412",
-    "coletor":"Paulo",
-    "data_de_recebimento": "2023-00-00",
-    "retirado":true
-  }],
-  "AP2222A": [
-
-    { "id": 1,
-    "name": "CaixaKabum",
-    "destinatario": "AP12345",
-    "coletor":"João da Silva",
-    "data_de_recebimento": "2023-00-00",
-    "retirado":true
+    {
+      "id": 3,
+      "name": "Teclado Mecânico",
+      "destinatario": "102A",
+      "coletor": "Maria",
+      "data_de_recebimento": "18/05/2025",
+      "retirado": true
+    },
+    {
+      "id": 4,
+      "name": "Monitor Ultrawide",
+      "destinatario": "102B",
+      "coletor": "Pedro",
+      "data_de_recebimento": "20/05/2025",
+      "retirado": true
+    },
+    {
+      "id": 5,
+      "name": "Livro de Receitas",
+      "destinatario": "103A",
+      "coletor": "Síndico",
+      "data_de_recebimento": "22/05/2025",
+      "retirado": true
+    },
+    {
+      "id": 6,
+      "name": "Fones de Ouvido",
+      "destinatario": "103B",
+      "coletor": "Porteiro A",
+      "data_de_recebimento": "25/05/2025",
+      "retirado": true
+    },
+    {
+      "id": 7,
+      "name": "Câmera de Segurança",
+      "destinatario": "104A",
+      "coletor": "Porteiro B",
+      "data_de_recebimento": "28/05/2025",
+      "retirado": true
+    },
+    {
+      "id": 8,
+      "name": "Notebook",
+      "destinatario": "104B",
+      "coletor": "Síndico",
+      "data_de_recebimento": "01/06/2025",
+      "retirado": true
+    },
+    {
+      "id": 9,
+      "name": "Smartphone",
+      "destinatario": "105A",
+      "coletor": "Porteiro A",
+      "data_de_recebimento": "04/06/2025",
+      "retirado": true
+    },
+    {
+      "id": 10,
+      "name": "Impressora",
+      "destinatario": "105B",
+      "coletor": "Porteiro B",
+      "data_de_recebimento": "07/06/2025",
+      "retirado": true
+    }
+    ],
+    "Apartamentos":[
+    {
+      "id": "12",
+      "userId": 1,
+      "cpf": "846.499.970-46",
+      "apartamento": "101A"
+    },
+    {
+      "id": "13",
+      "userId": 2,
+      "cpf": "435.241.650-90",
+      "apartamento": "101B"
+    },
+    {
+      "id": "14",
+      "userId": 3,
+      "cpf": "681.896.725-80",
+      "apartamento": "102A"
+    },
+    {
+      "id": "15",
+      "userId": 4,
+      "cpf": "118.452.375-25",
+      "apartamento": "102B"
+    },
+    {
+      "id": "16",
+      "userId": 5,
+      "cpf": "957.809.864-62",
+      "apartamento": "103A"
+    },
+    {
+      "id": "17",
+      "userId": 6,
+      "cpf": "503.356.562-01",
+      "apartamento": "103B"
+    },
+    {
+      "id": "18",
+      "userId": 7,
+      "cpf": "740.529.148-39",
+      "apartamento": "104A"
+    },
+    {
+      "id": "19",
+      "userId": 8,
+      "cpf": "286.683.680-88",
+      "apartamento": "104B"
+    },
+    {
+      "id": "20",
+      "userId": 9,
+      "cpf": "625.138.215-29",
+      "apartamento": "105A"
+    },
+    {
+      "id": "21",
+      "userId": 10,
+      "cpf": "964.495.290-65",
+      "apartamento": "105B"
     }
   ]
 }

@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Mrv Condominios
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -51,7 +51,7 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    title: 'Docs',
+    title: 'Minhas encomendas',
     caption: 'quasar.dev',
     icon: 'school',
     link: 'https://quasar.dev',
