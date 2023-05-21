@@ -2,63 +2,63 @@
   "Usuarios":[
      {
     "id": 1,
-    "name": "John Biden",
+    "productDiscrition": "John Biden",
     "accessCode": "d3aff16a801b4b7d36b4da1094bee345",
     "cpf": "846.499.970-46",
     "userType": "inquilino"
   },
   {
     "id": 2,
-    "name": "Jane Doe",
+    "productDiscrition": "Jane Doe",
     "accessCode": "a8e9c2f3d4b1e0a7d8b5c3d9e4f1a6b",
     "cpf": "435.241.650-90",
     "userType": "inquilino"
   },
   {
     "id": 3,
-    "name": "Mark Smith",
+    "productDiscrition": "Mark Smith",
     "accessCode": "f2e5a7d3b1c4e6a8f9d1b3c7a2d8b5c",
     "cpf": "681.896.725-80",
     "userType": "inquilino"
   },
   {
     "id": 4,
-    "name": "Sarah Johnson",
+    "productDiscrition": "Sarah Johnson",
     "accessCode": "b7c8d6e1a9f3b4a6e7a2c5d7b2a9e3f",
     "cpf": "118.452.375-25",
     "userType": "inquilino"
   },
   {
     "id": 5,
-    "name": "Michael Brown",
+    "productDiscrition": "Michael Brown",
     "accessCode": "e5a7c2f9d1b6e4a8d5b3c1d9e4f1a7b",
     "cpf": "957.809.864-62",
     "userType": "porteiro"
   },
   {
     "id": 6,
-    "name": "Emily Davis",
+    "productDiscrition": "Emily Davis",
     "accessCode": "d5b9c7e1f4a6d2b8e9f1a3c5b9d2e7f",
     "cpf": "503.356.562-01",
     "userType": "inquilino"
   },
   {
     "id": 7,
-    "name": "Christopher Wilson",
+    "productDiscrition": "Christopher Wilson",
     "accessCode": "b5c9a2d8e4f6b1c5d2e1f9a4d5e2f7b",
     "cpf": "740.529.148-39",
     "userType": "porteiro"
   },
   {
     "id": 8,
-    "name": "Olivia Martinez",
+    "productDiscrition": "Olivia Martinez",
     "accessCode": "f3b6e9d2a7c1f5b8e1a4c3d9e2f7b5c",
     "cpf": "286.683.680-88",
     "userType": "sindico"
   },
   {
     "id": 9,
-    "name": "Daniel Anderson",
+    "productDiscrition": "Daniel Anderson",
     "accessCode": "a6d9e2f8b3c1a4d6b8c5e2f9a1d7b5e",
     "cpf": "625.138.215-29",
     "userType": "inquilino"
@@ -68,80 +68,80 @@
   "Encomendas": [
     {
       "id": 1,
-      "name": "Cadeira Gamer",
-      "destinatario": "101A",
+      "productDiscrition": "Cadeira Gamer",
+      "apartment": "101A",
       "recipient": "Joãozinho",
       "receipt_date": "12/05/2025",
       "withdrawn": true
     },
     {
       "id": 2,
-      "name": "Mouse Gamer",
-      "destinatario": "101B",
+      "productDiscrition": "Mouse Gamer",
+      "apartment": "101B",
       "recipient": "Joãozinho",
       "receipt_date": "15/05/2025",
       "withdrawn": true
     },
     {
       "id": 3,
-      "name": "Teclado Mecânico",
-      "destinatario": "102A",
+      "productDiscrition": "Teclado Mecânico",
+      "apartment": "102A",
       "recipient": "Maria",
       "receipt_date": "18/05/2025",
       "withdrawn": true
     },
     {
       "id": 4,
-      "name": "Monitor Ultrawide",
-      "destinatario": "102B",
+      "productDiscrition": "Monitor Ultrawide",
+      "apartment": "102B",
       "recipient": "Pedro",
       "receipt_date": "20/05/2025",
       "withdrawn": true
     },
     {
       "id": 5,
-      "name": "Livro de Receitas",
-      "destinatario": "103A",
+      "productDiscrition": "Livro de Receitas",
+      "apartment": "103A",
       "recipient": "Síndico",
       "receipt_date": "22/05/2025",
       "withdrawn": true
     },
     {
       "id": 6,
-      "name": "Fones de Ouvido",
-      "destinatario": "103B",
+      "productDiscrition": "Fones de Ouvido",
+      "apartment": "103B",
       "recipient": "Porteiro A",
       "receipt_date": "25/05/2025",
       "withdrawn": true
     },
     {
       "id": 7,
-      "name": "Câmera de Segurança",
-      "destinatario": "104A",
+      "productDiscrition": "Câmera de Segurança",
+      "apartment": "104A",
       "recipient": "Porteiro B",
       "receipt_date": "28/05/2025",
       "withdrawn": true
     },
     {
       "id": 8,
-      "name": "Notebook",
-      "destinatario": "104B",
+      "productDiscrition": "Notebook",
+      "apartment": "104B",
       "recipient": "Síndico",
       "receipt_date": "01/06/2025",
       "withdrawn": true
     },
     {
       "id": 9,
-      "name": "Smartphone",
-      "destinatario": "105A",
+      "productDiscrition": "Smartphone",
+      "apartment": "105A",
       "recipient": "Porteiro A",
       "receipt_date": "04/06/2025",
       "withdrawn": true
     },
     {
       "id": 10,
-      "name": "Impressora",
-      "destinatario": "105B",
+      "productDiscrition": "Impressora",
+      "apartment": "105B",
       "recipient": "Porteiro B",
       "receipt_date": "07/06/2025",
       "withdrawn": true
