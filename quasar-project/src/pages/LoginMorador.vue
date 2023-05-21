@@ -1,5 +1,4 @@
-<!-- eslint-disable vue/no-parsing-error -->
-<!-- eslint-disable no-unused-vars -->
+
 <template>
     <q-layout class="container">
 
@@ -61,7 +60,7 @@
   </q-layout>
 </template>
 <script>
-import { ref } from 'vue';
+import { ref, onSubmit } from 'vue';
 import { api } from 'boot/axios';
 import { useRouter } from 'vue-router';
 import { console } from 'html';
@@ -77,7 +76,7 @@ export default {
       codeAcess: '',
     });
 
-    // eslint-disable-next-line no-unused-vars
+
     const onSubmit = () => {
       const { cpf, apartment, codeAcess } = dataLogin.value;
 

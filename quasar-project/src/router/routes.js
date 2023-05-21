@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/',
     name: 'loginUser',
-    component: () => import('pages/LoginPageMorador.vue'),
+    component: () => import('pages/LoginMorador.vue'),
   },
   {
     path: '/cadastroUsuario',
