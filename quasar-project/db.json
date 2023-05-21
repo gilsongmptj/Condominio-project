@@ -70,143 +70,143 @@
       "id": 1,
       "name": "Cadeira Gamer",
       "destinatario": "101A",
-      "coletor": "Joãozinho",
-      "data_de_recebimento": "12/05/2025",
-      "retirado": true
+      "recipient": "Joãozinho",
+      "receipt_date": "12/05/2025",
+      "withdrawn": true
     },
     {
       "id": 2,
       "name": "Mouse Gamer",
       "destinatario": "101B",
-      "coletor": "Joãozinho",
-      "data_de_recebimento": "15/05/2025",
-      "retirado": true
+      "recipient": "Joãozinho",
+      "receipt_date": "15/05/2025",
+      "withdrawn": true
     },
     {
       "id": 3,
       "name": "Teclado Mecânico",
       "destinatario": "102A",
-      "coletor": "Maria",
-      "data_de_recebimento": "18/05/2025",
-      "retirado": true
+      "recipient": "Maria",
+      "receipt_date": "18/05/2025",
+      "withdrawn": true
     },
     {
       "id": 4,
       "name": "Monitor Ultrawide",
       "destinatario": "102B",
-      "coletor": "Pedro",
-      "data_de_recebimento": "20/05/2025",
-      "retirado": true
+      "recipient": "Pedro",
+      "receipt_date": "20/05/2025",
+      "withdrawn": true
     },
     {
       "id": 5,
       "name": "Livro de Receitas",
       "destinatario": "103A",
-      "coletor": "Síndico",
-      "data_de_recebimento": "22/05/2025",
-      "retirado": true
+      "recipient": "Síndico",
+      "receipt_date": "22/05/2025",
+      "withdrawn": true
     },
     {
       "id": 6,
       "name": "Fones de Ouvido",
       "destinatario": "103B",
-      "coletor": "Porteiro A",
-      "data_de_recebimento": "25/05/2025",
-      "retirado": true
+      "recipient": "Porteiro A",
+      "receipt_date": "25/05/2025",
+      "withdrawn": true
     },
     {
       "id": 7,
       "name": "Câmera de Segurança",
       "destinatario": "104A",
-      "coletor": "Porteiro B",
-      "data_de_recebimento": "28/05/2025",
-      "retirado": true
+      "recipient": "Porteiro B",
+      "receipt_date": "28/05/2025",
+      "withdrawn": true
     },
     {
       "id": 8,
       "name": "Notebook",
       "destinatario": "104B",
-      "coletor": "Síndico",
-      "data_de_recebimento": "01/06/2025",
-      "retirado": true
+      "recipient": "Síndico",
+      "receipt_date": "01/06/2025",
+      "withdrawn": true
     },
     {
       "id": 9,
       "name": "Smartphone",
       "destinatario": "105A",
-      "coletor": "Porteiro A",
-      "data_de_recebimento": "04/06/2025",
-      "retirado": true
+      "recipient": "Porteiro A",
+      "receipt_date": "04/06/2025",
+      "withdrawn": true
     },
     {
       "id": 10,
       "name": "Impressora",
       "destinatario": "105B",
-      "coletor": "Porteiro B",
-      "data_de_recebimento": "07/06/2025",
-      "retirado": true
+      "recipient": "Porteiro B",
+      "receipt_date": "07/06/2025",
+      "withdrawn": true
     }
     ],
-  "Apartamentos":[
+  "apartments":[
     {
       "id": "12",
       "userId": 1,
       "cpf": "846.499.970-46",
-      "apartamento": "101A"
+      "apartment": "101A"
     },
     {
       "id": "13",
       "userId": 2,
       "cpf": "435.241.650-90",
-      "apartamento": "101B"
+      "apartment": "101B"
     },
     {
       "id": "14",
       "userId": 3,
       "cpf": "681.896.725-80",
-      "apartamento": "102A"
+      "apartment": "102A"
     },
     {
       "id": "15",
       "userId": 4,
       "cpf": "118.452.375-25",
-      "apartamento": "102B"
+      "apartment": "102B"
     },
     {
       "id": "16",
       "userId": 5,
       "cpf": "957.809.864-62",
-      "apartamento": "103A"
+      "apartment": "103A"
     },
     {
       "id": "17",
       "userId": 6,
       "cpf": "503.356.562-01",
-      "apartamento": "103B"
+      "apartment": "103B"
     },
     {
       "id": "18",
       "userId": 7,
       "cpf": "740.529.148-39",
-      "apartamento": "104A"
+      "apartment": "104A"
     },
     {
       "id": "19",
       "userId": 8,
       "cpf": "286.683.680-88",
-      "apartamento": "104B"
+      "apartment": "104B"
     },
     {
       "id": "20",
       "userId": 9,
       "cpf": "625.138.215-29",
-      "apartamento": "105A"
+      "apartment": "105A"
     },
     {
       "id": "21",
       "userId": 10,
       "cpf": "964.495.290-65",
-      "apartamento": "105B"
+      "apartment": "105B"
     }
   ]
 }

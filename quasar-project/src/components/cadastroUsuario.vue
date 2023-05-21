@@ -1,138 +1,90 @@
 <template>
-  <div class="container bg-white">
-  <div class="formulario">
-    <q-radio
-      keep-color
-      v-model="tipoUsuario"
-      val="funcionario"
-      label="Porteiro/Sindico"
-      color="teal"
-    />
-    <q-radio
-      checked-icon
-      keep-color
-      v-model="tipoUsuario"
-      val="morador"
-      label="morador"
-      color="teal"
-    />
-    <q-input
-      filled
-      v-model="nome"
-      label="NOME:"
-      placeholder="Nome Completo"
-      :dense="dense"
-    />
-    <q-input
-      filled
-      v-model="cpf"
-      label="CPF:"
-      placeholder="000.000.000-00"
-      :dense="dense"
-    />
-    <q-input
-      v-if="tipoUsuario === 'funcionario'"
-      filled
-      v-model="codigoDeAcesso"
-      label="CHAVE DE ACESSO:"
-      placeholder="1234"
-      :dense="dense"
-    />
+  <div class="cadastro q-pa-md">
+    <q-form @submit="onSubmit" class="q-gutter-md">
+      <h1>
+        CADASTRO DE ENCOMENDAS
+      </h1>
 
-    <q-btn
-      label="Adicionar apartamento"
-      color="primary"
-      @click="prompt = true"
-    />
-    <br />
-    <!-- dados para o dialog -->
-    <q-dialog v-model="prompt" persistent>
-      <q-card style="min-width: 350px">
-        <q-card-section>
-          <div class="text-h6">Numero do Apartamento</div>
-        </q-card-section>
-
-        <q-card-section class="q-pt-none">
-          <q-input
-            dense
-            v-model="apartamento"
-            autofocus
-            @keyup.enter="prompt = false"
-          />
-        </q-card-section>
-
-        <q-card-actions align="right" class="text-primary">
-          <q-btn flat label="Cancelar" v-close-popup />
-          <q-btn
-            flat
-            label="Adicionar"
-            v-close-popup
-            @click="adicionarApartamento()"
-          />
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
-    <ul>
-      <li v-for="ap in apartamentos" :key="ap.value">
-        {{ ap }}
-      </li>
-    </ul>
-    <q-btn
-        type="submit"
-        :loading="submitting"
-        label="Enviar"
-        class="q-mt-md"
+      <q-input
+        filled
+        v-model="identification"
+        label="Nome para Encomenda *"
         color="teal"
-        @click="enviarUsuario()"
-      >
-        <template v-slot:loading>
-          <q-spinner-facebook />
-        </template>
-      </q-btn>
-    <br />
-    </div>
+        lazy-rules
+        :rules="[
+          (val) =>
+            (val && val.length > 0) || 'Por favor digite o nome do objeto',
+        ]"
+      />
+
+      <q-input
+        filled
+        color="teal"
+        v-model="receiver"
+        label="Nome do recebedor *"
+        lazy-rules
+        :rules="[
+          (val) =>
+            (val && val.length > 0) ||
+            'Por favor digite o responsavel pela encomenda',
+        ]"
+      />
+
+      <q-select
+        preenchido
+        v-model="apartment"
+        label=" Apartamento"
+        color="teal"
+        :options="numeroapartamento"
+        estilo=" largura : 250px "
+        comportamento=" menu "
+        :rules="[
+          (val) =>
+            (val && val.length > 0) || 'Por favor selecione um apartamento',
+        ]"
+      />
+
+      <q-input
+        filled
+        type="date"
+        color="teal"
+        v-model="received_date"
+        label="Data do Recebimento *"
+        lazy-rules
+        :rules="[
+          (val) => (val !== null && val !== '') || 'Por favor selecione a data',
+        ]"
+      />
+
+      <q-btn label="Cadastrar" color="teal" type="submit" />
+    </q-form>
   </div>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
-import api from '../../../../../../../../api';
+import useQuasar from 'quasar/src/composables/use-quasar.js';
+import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'CadastroUsuarioPage',
-
   setup() {
+    // eslint-disable-next-line no-unused-vars
+    const $q = useQuasar();
+
+    const identification = ref(null);
+    const apartment = ref(null);
+    const receiver = ref(null);
+    // eslint-disable-next-line camelcase
+    const receveid_date = ref(null);
+
     return {
-      tipoUsuario: ref('morador'),
-      nome: ref(''),
-      cpf: ref(''),
-      codigoDeAcesso: ref(''),
-      prompt: ref(false),
-      apartamento: ref(''),
-      apartamentos: ref([]),
-      adicionarApartamento() {
-        this.apartamentos.push(this.apartamento);
-        this.apartamento = '';
-      },
-      enviarUsuario() {
-        api
-          .post('/usuarios', {
-            nome: this.nome,
-            cpf: this.cpf,
-            tipoUsuario: this.tipoUsuario,
-            codigoDeAcesso: this.codigoDeAcesso,
-            apartamentos: [this.apartamentos],
-          })
-          .then(() => {
-            // eslint-disable-next-line no-alert
-            alert('Usuário cadastrado com sucesso');
-          })
-          .catch((error) => {
-            // eslint-disable-next-line no-alert
-            alert(error);
-          });
-      },
+      identification,
+      apartment,
+      receiver,
+      // eslint-disable-next-line camelcase
+      receveid_date,
     };
   },
+  onSubmit() {},
+  numeroapartamento() {},
 });
 </script>
