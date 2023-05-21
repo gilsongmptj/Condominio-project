@@ -1,5 +1,5 @@
 <template>
-  <div class="cadastro q-pa-md">
+  <div class="q-pa-md">
     <q-form @submit="onSubmit" class="q-gutter-md">
       <h1>
         CADASTRO DE ENCOMENDAS
