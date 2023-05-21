@@ -41,128 +41,64 @@
     </q-form>
   </div>
 </template>
-<script setup>
+<script >
 import { Notify } from 'quasar';
 import { ref, onMounted } from 'vue';
 import { api } from 'src/boot/axios';
 
-export default {
-  setup() {
-    const productDescription = ref('');
-    const apartment = ref('');
-    const recipient = ref('');
-    const receiptDate = ref('');
-    const user = ref({});
+const productDescription = ref('');
+const apartment = ref('');
+const recipient = ref('');
+const receiptDate = ref('');
+const user = ref({});
 
-    const sendOrders = () => {
-      api
-        .post('/encomendas', {
-          productDescription: productDescription.value,
-          apartment: apartment.value,
-          recipient: recipient.value,
-          receiptDate: receiptDate.value,
-        })
-        .then(() => {
-          Notify.create({
-            type: 'positive',
-            message: 'Cadastro Realizado',
-          });
-        })
-        .catch((error) => {
-          alert(error);
-        });
-    };
-
-    const getApartment = async () => {
-      try {
-        const res = await api.get('/usuarios');
-        user.value = res.data;
-        validateData();
-      } catch (error) {
-        Notify.create({
-          type: 'negative',
-        });
-      }
-    };
-
-    const validateData = () => {
-      const apartmentsFound = user.value
-        .flatMap((user) => user.apartamentos)
-        .flat();
-      console.log(apartmentsFound);
-    };
-
-    onMounted(() => {
-      sendOrders();
+const sendOrders = () => {
+  api
+    .post('/encomendas', {
+      productDescription: productDescription.value,
+      apartment: apartment.value,
+      recipient: recipient.value,
+      receiptDate: receiptDate.value,
+    })
+    .then(() => {
+      Notify.create({
+        type: 'positive',
+        message: 'Cadastro Realizado',
+      });
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-alert
+      alert(error);
     });
-
-    return {
-      productDescription,
-      apartment,
-      recipient,
-      receiptDate,
-      user,
-      getApartment,
-    };
-  },
 };
-</script>
 
-<script setup>
-import { Notify } from 'quasar';
-import { ref, onMounted } from 'vue';
-import { api } from 'src/boot/axios';
+const getApartment = async () => {
+  try {
+    const res = await api.get('/usuarios');
+    user.value = res.data;
+    // eslint-disable-next-line no-use-before-define
+    validateData();
+  } catch (error) {
+    Notify.create({
+      type: 'negative',
+    });
+  }
+};
+
+const validateData = () => {
+  const apartmentsFound = user.value
+    // eslint-disable-next-line no-shadow
+    .flatMap((user) => user.apartamentos)
+    .flat();
+  console.log(apartmentsFound);
+};
+
+onMounted(() => {
+  sendOrders();
+});
 
 export default {
   setup() {
-    const productDescription = ref('');
-    const apartment = ref('');
-    const recipient = ref('');
-    const receiptDate = ref('');
-    const user = ref({});
-
-    const sendOrders = () => {
-      api
-        .post('/encomendas', {
-          productDescription: productDescription.value,
-          apartment: apartment.value,
-          recipient: recipient.value,
-          receiptDate: receiptDate.value,
-        })
-        .then(() => {
-          Notify.create({
-            type: 'positive',
-            message: 'Cadastro Realizado',
-          });
-        })
-        .catch((error) => {
-          alert(error);
-        });
-    };
-
-    const getApartment = async () => {
-      try {
-        const res = await api.get('/usuarios');
-        user.value = res.data;
-        validateData();
-      } catch (error) {
-        Notify.create({
-          type: 'negative',
-        });
-      }
-    };
-
-    const validateData = () => {
-      const apartmentsFound = user.value
-        .flatMap((user) => user.apartamentos)
-        .flat();
-      console.log(apartmentsFound);
-    };
-
-    onMounted(() => {
-      sendOrders();
-    });
-
     return {
       productDescription,
       apartment,

@@ -20,7 +20,7 @@
       <q-input
         filled
         color="teal"
-        v-model="receiver"
+        v-model="receptor"
         label="Nome do recebedor *"
         lazy-rules
         :rules="[
@@ -35,7 +35,7 @@
         v-model="apartment"
         label=" Apartamento"
         color="teal"
-        :options="numeroapartamento"
+        :options="apartment"
         estilo=" largura : 250px "
         comportamento=" menu "
         :rules="[
@@ -48,7 +48,7 @@
         filled
         type="date"
         color="teal"
-        v-model="received_date"
+        v-model="receptDate"
         label="Data do Recebimento *"
         lazy-rules
         :rules="[
@@ -72,19 +72,19 @@ export default defineComponent({
 
     const identification = ref(null);
     const apartment = ref(null);
-    const receiver = ref(null);
+    const receptor = ref(null);
     // eslint-disable-next-line camelcase
-    const receveid_date = ref(null);
+    const receptDate = ref(null);
 
     return {
       identification,
       apartment,
-      receiver,
+      receptor,
       // eslint-disable-next-line camelcase
-      receveid_date,
+      receptDate,
     };
   },
   onSubmit() {},
-  numeroapartamento() {},
+  apartment() {},
 });
 </script>
